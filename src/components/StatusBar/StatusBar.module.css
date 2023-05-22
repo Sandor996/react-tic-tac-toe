@@ -1,0 +1,16 @@
+.result {
+  margin-top: .5rem;
+  font-size: 2rem;
+  padding: 10px;
+  text-align: center;
+}
+
+.result.blue {
+  text-shadow: var(--neon-text-shadow-blue);
+  box-shadow: var(--neon-border-shadow-blue);
+}
+
+.result.red {
+  text-shadow: var(--neon-text-shadow-red);
+  box-shadow: var(--neon-border-shadow-red);
+}

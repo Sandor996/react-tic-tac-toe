@@ -1,0 +1,35 @@
+.score {
+  font-size: 3rem;
+  padding: 10px;
+  text-align: center;
+}
+
+.score__player {
+  text-shadow: var(--neon-text-shadow-blue);
+  animation: flicker_text 10s infinite;
+}
+
+.score__computer {
+  text-shadow: var(--neon-text-shadow-red);
+  animation: flicker_text 10s 0.5s infinite alternate;
+}
+
+
+@keyframes flicker_text {
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+      opacity: 1;;
+    }
+  
+    20%,
+    24%,
+    55% {
+     opacity:0.5;
+    }
+  }

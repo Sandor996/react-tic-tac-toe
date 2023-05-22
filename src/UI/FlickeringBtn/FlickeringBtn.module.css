@@ -1,0 +1,58 @@
+.flickering_btn {
+  font-size: 13rem;
+  font-weight: 200;
+  font-style: italic;
+  color: #fff;
+  padding: 4rem 6rem 5.5rem;
+  border: 0.4rem solid #fff;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  animation: flicker_btn 1.5s infinite alternate;
+}
+
+.flickering_btn ::-moz-selection {
+  background-color: var(--neon-border-color);
+  color: var(--neon-text-color);
+}
+
+.flickering_btn ::selection {
+  background-color: var(--neon-border-color);
+  color: var(--neon-text-color);
+}
+
+.flickering_btn :focus {
+  outline: none;
+}
+
+@keyframes flicker_btn {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: var(--neon-text-shadow-red);
+
+    box-shadow: var(--neon-border-shadow-blue);
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .flickering_btn {
+    font-size: 6.5rem;
+    padding: 2rem 3rem 2.25rem;
+    border: 0.2rem solid #fff;
+    border-radius: 1rem;
+  }
+}
+
